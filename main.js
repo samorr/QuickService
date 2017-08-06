@@ -1,29 +1,20 @@
 
-const {app, BrowserWindow, ipcMain, shell} = require('electron')
+const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 const url = require('url')
-let electronEjs = require('electron-ejs')
-let MongoClient = require('mongodb').MongoClient
-const dburl = "mongodb://localhost:27017/quickServicedb"
-let db = require('./dbutils/connection.js')
-
-//connecting to database
-let data = {}
-data.dbdata = db.dbdata
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win
-let ejs = new electronEjs(data, {})
 
 function createWindow () {
   // Create the browser window.
   win = new BrowserWindow()
-  win.maximize()
+  win.setFullScreen(true)
 
   // and load the index.html of the app.
   win.loadURL(url.format({
-    pathname: path.join(__dirname, 'views/index.ejs'),
+    pathname: path.join(__dirname, './app/views/index.html'),
     protocol: 'file:',
     slashes: true
   }))
@@ -39,9 +30,14 @@ function createWindow () {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     win = null
-    db.close()
   })
 }
+
+
+ipcMain.on('close-main-window', function () {
+  win = null
+  app.quit()
+})
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.

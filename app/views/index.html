@@ -7,22 +7,32 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   <script>
-    const {ipcRenderer} = require('electron')
-    ipcRenderer.on('asynchronous-reply', (event, arg) => {
-      console.log(arg) // prints "pong"
+    let utils = require('../index.js')
+
+    utils.prepareDBConnection()
+
+    document.addEventListener('DOMContentLoaded', function(event) {
+      console.log('DOM has been loaded')
+      utils.prepareCloseButton()
     })
-    ipcRenderer.send('asynchronous-message', 'ping')
   </script>
   
 </head>
 <body>
+<button class="close-button">close</button>
 <div class="container">
   <h1>Quick Service</h1>
-  <h2>Klienci</h2>
+  <form class="form-inline">
+    <div class="form-group">
+      <label for="regNum">Numer rejestracyjny:</label>
+      <input type="regNum" class="form-control" id="regNum">
+    </div>
+    <button type="submitRegNum" class="btn btn-default search-button">Szukaj</button>
+  </form>
+  
   <div class="table-responsive">
-    <table class="table table-hover" id="clients">
+    <table class="table table-hover" id="car">
       <thead>
         <tr>
           <th>Imię</th>
