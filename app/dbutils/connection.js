@@ -18,7 +18,7 @@ utils.close = function() {
 }
 
 utils.findCar = async function(regNum) {
-  return await data.dbdata.cars.findOne({ "regNum" : regNum })
+  return await data.dbdata.collection('cars').findOne({ "regNum" : regNum })
 }
 
 module.exports = utils

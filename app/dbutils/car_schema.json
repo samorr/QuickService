@@ -2,15 +2,17 @@
     "regNum" : "REG_NUM_MASK",
     "phone" : "PHONE_NUM_MASK",
     "VIN": "VIN_MASK",
+    "brand" : "BRAND_MASK",
+    "model" : "MODEL_MASK",
     "yearOfProd" : "YEAR_OF_PROD_MASK",
     "engine" : {
         "capacity" : "ENGINE_CAPACITY_MASK",
         "power" : {
             "horsepower" : "ENGINE_POWER_IN_HORSEPOWER_MASK",
             "kW" : "ENGINE_POWER_IN_KW_MASK"
-        }
+        },
+        "fuel" : "FUEL_MASK"
     },
-    "fuel" : "FUEL_MASK",
     "filters" : {
         "air" : "AIR_FILTER_MASK",
         "oil" : "OIL_FILTER_MASK",

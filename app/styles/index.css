@@ -1,0 +1,6 @@
+.table th, td{
+    text-align: center !important;
+}
+.table thead {
+    font-size: 200%;
+}

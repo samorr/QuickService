@@ -17,7 +17,7 @@ model.prepareCloseButton = function() {
 
 model.prepareSearchButton = function() {
   let searchEl = document.querySelector('.search-button')
-  searchEl.addEventListener('submit', async function (event) {
+  searchEl.addEventListener('click', async function (event) {
     event.preventDefault()
     let regNum = document.getElementById('regNum').value
     await findAndDisplayCar(regNum)
@@ -26,6 +26,7 @@ model.prepareSearchButton = function() {
 
 findAndDisplayCar = async function(regNum) {
   let car = await db.findCar(regNum)
+  await console.log(car)
 }
 
 
