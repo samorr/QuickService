@@ -14,7 +14,13 @@ utils.connect = async function() {
 }
 
 utils.close = function() {
+  try {
     data.dbdata.close()
+  }
+  catch(err) {
+    //exception during closing data base (maybe you haven't connected to)
+    console.log(err)
+  }
 }
 
 utils.findCar = async function(regNum) {

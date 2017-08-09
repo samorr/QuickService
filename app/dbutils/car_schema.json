@@ -6,7 +6,7 @@
     "model" : "MODEL_MASK",
     "yearOfProd" : "YEAR_OF_PROD_MASK",
     "engine" : {
-        "capacity" : "ENGINE_CAPACITY_MASK",
+        "engineCapacity" : "ENGINE_CAPACITY_MASK",
         "power" : {
             "horsepower" : "ENGINE_POWER_IN_HORSEPOWER_MASK",
             "kW" : "ENGINE_POWER_IN_KW_MASK"
@@ -20,7 +20,7 @@
         "cabin" : "CABIN_FILTER_MASK"
     },
     "oil" : {
-        "capacity" : "OIL_CAPACITY_MASK",
+        "oilCapacity" : "OIL_CAPACITY_MASK",
         "usedBefore" : "USED_BEFORE_OIL_MASK"
     }
 }

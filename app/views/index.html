@@ -4,6 +4,7 @@
   <title>Quick Service</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="import" href="./car-table.html">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../styles/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -15,8 +16,10 @@
 
     document.addEventListener('DOMContentLoaded', function(event) {
       console.log('DOM has been loaded')
+      
       utils.prepareCloseButton()
       utils.prepareSearchButton()
+      
     })
   </script>
   
@@ -28,97 +31,10 @@
   <form class="form-inline">
     <div class="form-group">
       <label for="regNum">Numer rejestracyjny:</label>
-      <input type="regNum" class="form-control" id="regNum">
+      <input type="regNum" class="form-control" id="regNumSearch">
     </div>
     <button type="submitRegNum" class="btn btn-default search-button">Szukaj</button>
   </form>
-  
-  <div class="table-responsive" style="text-align : left" id="car">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th colspan="6">Dane ogólne</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Nr rejestracyjny</th>
-          <th>Telefon</th>
-          <th>VIN</th>
-          <th>Marka</th>
-          <th>Model</th>
-          <th>Rok produkcji</th>
-        </tr>
-        <tr>
-          <td>MASK</td>
-          <td>MASK</td>
-          <td>MASK</td>
-          <td>MASK</td>
-          <td>MASK</td>
-          <td>MASK</td>
-        </tr>
-      </tbody>
-    </table>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th colspan="4">Silnik</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Pojemność</th>
-          <th colspan="2">Moc</th>
-          <th>Paliwo</th>
-        </tr>
-        <tr>
-          <td>MASK</td>
-          <td>MASK</td>
-          <td>MASK</td>
-          <td>MASK</td>
-        </tr>
-      </tbody>
-    </table>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th colspan="4">Filtry</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Powietrza</th>
-          <th>Oleju</th>
-          <th>Paliwa</th>
-          <th>Kabinowy</th>
-        </tr>
-        <tr>
-          <td>MASK</td>
-          <td>MASK</td>
-          <td>MASK</td>
-          <td>MASK</td>
-        </tr>
-      </tbody>
-    </table>
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th colspan="2">Olej</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Pojemność</th>
-          <th>Zastosowany</th>
-        </tr>
-        <tr>
-          <td>MASK</td>
-          <td>MASK</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 </div>
-
 </body>
 </html>
