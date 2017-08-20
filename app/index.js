@@ -35,7 +35,7 @@ displayCar = function(car) {
   let content = tableLink.import
   let table = content.querySelector('#car-table')
   insertCarDataInTable(car, table)
-  document.querySelector('.container').appendChild(table.cloneNode(true))
+  document.querySelector('.panel').appendChild(table.cloneNode(true))
 }
 
 insertCarDataInTable = function(data, table) {

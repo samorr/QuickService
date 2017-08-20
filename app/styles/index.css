@@ -4,3 +4,7 @@
 .table thead {
     font-size: 200%;
 }
+.container {
+    padding-right: 0px !important;
+    padding-left: 0px !important; 
+}

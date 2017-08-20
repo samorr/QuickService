@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <div class="table-responsive" style="text-align : left" id="car-table">
+  <div class="table-responsive panel-body" style="text-align : left" id="car-table">
     <table class="table table-hover">
       <thead>
         <tr>
@@ -60,10 +60,10 @@
           <th>Kabinowy</th>
         </tr>
         <tr>
-          <td id="air">MASK</td>
-          <td id="oil">MASK</td>
-          <td id="fuel">MASK</td>
-          <td id="cabin">MASK</td>
+          <td id="airFilter">MASK</td>
+          <td id="oilFilter">MASK</td>
+          <td id="fuelFilter">MASK</td><!--TODO the same id as engine.fuel -->
+          <td id="cabinFilter">MASK</td>
         </tr>
       </tbody>
     </table>
@@ -84,5 +84,11 @@
         </tr>
       </tbody>
     </table>
+    <div class="panel-footer">
+      <div class="btn-group btn-group-lg">
+        <button type="button" class="btn btn-primary">Historia usług</button>
+        <button type="button" class="btn btn-primary">Dodaj usługę</button>
+      </div>
+    </div>
   </div>
 </html>
