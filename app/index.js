@@ -1,4 +1,7 @@
 const {ipcRenderer} = require('electron')
+const {BrowserWindow} = require('electron').remote
+const path = require('path')
+const url = require('url')
 let db = require('./dbutils/connection.js')
 
 let model = {}
@@ -25,9 +28,24 @@ model.prepareSearchButton = function() {
   })
 }
 
+model.prepareNewCarButton = function() {
+  document.querySelector('.new-car-button').addEventListener('click', async function (event) {
+    event.preventDefault()
+    let child = new BrowserWindow({width: 1000, height: 800})
+    child.loadURL(url.format({
+      pathname: path.join(__dirname, '/views/car-edit-table.html'),
+      protocol: 'file:',
+      slashes: true
+    }))
+
+  })
+}
+
 findAndDisplayCar = async function(regNum) {
   let car = await db.findCar(regNum)
-  await displayCar(car)
+  if(await car != undefined) {
+    await displayCar(car)
+  }
 }
 
 displayCar = function(car) {
@@ -35,7 +53,14 @@ displayCar = function(car) {
   let content = tableLink.import
   let table = content.querySelector('#car-table')
   insertCarDataInTable(car, table)
-  document.querySelector('.panel').appendChild(table.cloneNode(true))
+  let oldTable = document.querySelector('#car-table')
+  let panel = document.querySelector('.panel')
+  if (oldTable == undefined || !panel.contains(oldTable)) {
+    panel.appendChild(table.cloneNode(true))
+  } else {
+    panel.removeChild(oldTable)
+    panel.appendChild(table.cloneNode(true))
+  }
 }
 
 insertCarDataInTable = function(data, table) {

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Car editing</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../styles/index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="table-responsive panel-body" style="text-align : left" id="car-table">
+            <table class="table table-hover">
+            <thead>
+                <tr>
+                <th colspan="6">Dane ogólne</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th>Nr rejestracyjny</th>
+                <th>Telefon</th>
+                <th>VIN</th>
+                <th>Marka</th>
+                <th>Model</th>
+                <th>Rok produkcji</th>
+                </tr>
+                <tr>
+                <td id="regNum"><input type="text" class="form-control" id="regNumInput"></td>
+                <td id="phone"><input type="text" class="form-control" id="phoneInput"></td>
+                <td id="VIN"><input type="text" class="form-control" id="VINInput"></td>
+                <td id="brand"><input type="text" class="form-control" id="brandInput"></td>
+                <td id="model"><input type="text" class="form-control" id="modelInput"></td>
+                <td id="yearOfProd"><input type="text" class="form-control" id="yearOfProdInput"></td>
+                </tr>
+            </tbody>
+            </table>
+            <table class="table table-hover">
+            <thead>
+                <tr>
+                <th colspan="4">Silnik</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th>Pojemność</th>
+                <th colspan="2">Moc</th>
+                <th>Paliwo</th>
+                </tr>
+                <tr>
+                <td id="engineCapacity"><input type="text" class="form-control" id="engineCapacityInput"></td>
+                <td id="horsepower"><input type="text" class="form-control" id="horsepowerInput"></td>
+                <td id="kW"><input type="text" class="form-control" id="kWInput"></td>
+                <td id="fuel"><input type="text" class="form-control" id="fuelInput"></td>
+                </tr>
+            </tbody>
+            </table>
+            <table class="table table-hover">
+            <thead>
+                <tr>
+                <th colspan="4">Filtry</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th>Powietrza</th>
+                <th>Oleju</th>
+                <th>Paliwa</th>
+                <th>Kabinowy</th>
+                </tr>
+                <tr>
+                <td id="airFilter"><input type="text" class="form-control" id="airFilterInput"></td>
+                <td id="oilFilter"><input type="text" class="form-control" id="oilFilterInput"></td>
+                <td id="fuelFilter"><input type="text" class="form-control" id="fuelFilterInput"></td>
+                <td id="cabinFilter"><input type="text" class="form-control" id="cabinFilterInput"></td>
+                </tr>
+            </tbody>
+            </table>
+            <table class="table table-hover">
+            <thead>
+                <tr>
+                <th colspan="2">Olej</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th>Pojemność</th>
+                <th>Zastosowany</th>
+                </tr>
+                <tr>
+                <td id="oilCapacity"><input type="text" class="form-control" id="oilCapacityInput"></td>
+                <td id="usedBefore"><input type="text" class="form-control" id="usedBeforeInput"></td>
+                </tr>
+            </tbody>
+            </table>
+            <div class="panel-footer">
+                <div class="btn-group btn-group-lg">
+                    <button type="button" class="btn">Zapisz</button>
+                    <button type="button" class="btn">Anuluj</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
