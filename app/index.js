@@ -41,6 +41,14 @@ model.prepareNewCarButton = function() {
   })
 }
 
+model.prepareSaveCarButton = function() {
+  document.querySelector('.car-save-button').addEventListener('click', async function (event) {
+    event.preventDefault()
+    
+
+  })
+}
+
 findAndDisplayCar = async function(regNum) {
   let car = await db.findCar(regNum)
   if(await car != undefined) {
@@ -73,6 +81,12 @@ insertCarDataInTable = function(data, table) {
     else
       insertCarDataInTable(data[key], table)
   })
+}
+
+takeCarDataFromTable = function() {
+  let data = {};
+  let table = document.querySelector('#car-table')
+  
 }
 
 module.exports = model

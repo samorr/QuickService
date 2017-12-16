@@ -1,4 +1,4 @@
-{
+let car = {
   "regNum" : "REG_NUM_MASK",
   "phone" : "PHONE_NUM_MASK",
   "VIN": "VIN_MASK",
@@ -24,3 +24,5 @@
     "usedBefore" : "USED_BEFORE_OIL_MASK"
   }
 }
+
+module.exports = car;
